@@ -15,9 +15,9 @@ interface NoteDao {
     fun getAllNotes(): Flow<List<RoomNote>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun insert(note: RoomNote)
+    suspend fun insert(note: RoomNote)
 
     @Delete
-    fun delete(note: RoomNote)
+    suspend fun delete(note: RoomNote)
 
 }

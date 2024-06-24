@@ -1,9 +1,9 @@
-package com.example.notes.domain.repository
+package com.example.notes.data.database
 
 import com.example.notes.data.database.room.entity.RoomNote
 import kotlinx.coroutines.flow.Flow
 
-interface NoteRepository {
+interface NoteStorage {
 
     fun getAllNotes(): Flow<List<RoomNote>>
 
