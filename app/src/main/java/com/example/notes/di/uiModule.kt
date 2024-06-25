@@ -1,7 +1,6 @@
 package com.example.notes.di
 
-import com.example.notes.domain.usecase.SaveNoteUseCase
-import com.example.notes.ui.main.MainViewModel
+import com.example.notes.ui.main.viewmodel.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

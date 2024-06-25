@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="content_margin">8dp</dimen>
+    <dimen name="add_button_size">48dp</dimen>
+    <dimen name="min_height_add_note">48dp</dimen>
 </resources>

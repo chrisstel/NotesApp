@@ -2,15 +2,44 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RV_notes"
+        android:id="@+id/recycler_view_notes"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_add_note"
+        tools:listitem="@layout/note_item"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    
+    
+    <EditText
+        android:id="@+id/edit_text_add_note"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/min_height_add_note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/image_view_add_note"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_notes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:paddingHorizontal="8dp"
+        android:hint="@string/type_here_hint"/>
+
+
+    <ImageView
+        android:id="@+id/image_view_add_note"
+        android:src="@drawable/ic_outline_note_add_24"
+        android:layout_width="@dimen/add_button_size"
+        android:layout_height="@dimen/add_button_size"
+        app:layout_constraintStart_toEndOf="@id/edit_text_add_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edit_text_add_note"
+        app:layout_constraintBottom_toBottomOf="@id/edit_text_add_note"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

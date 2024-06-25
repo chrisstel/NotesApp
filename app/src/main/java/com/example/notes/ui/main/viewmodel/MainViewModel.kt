@@ -1,4 +1,4 @@
-package com.example.notes.ui.main
+package com.example.notes.ui.main.viewmodel
 
 import android.text.format.DateFormat
 import androidx.lifecycle.ViewModel
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import java.util.Date
 
 class MainViewModel(
-    private val getAllNotesUseCase: GetAllNotesUseCase,
+    getAllNotesUseCase: GetAllNotesUseCase,
     private val saveNoteUseCase: SaveNoteUseCase,
     private val deleteNoteUseCase: DeleteNoteUseCase
 
@@ -34,6 +34,6 @@ class MainViewModel(
         caption = createCaption(),
         text = text
     )
-    private fun createCaption(): String = DateFormat.format("hh:mm:ss, MM dd yyyy", Date()).toString()
+    private fun createCaption(): String = DateFormat.format("hh:mm, MM.dd.yyyy", Date()).toString()
     private fun <T> Flow<T>.asLiveDataFlow() = shareIn(viewModelScope, SharingStarted.Eagerly, replay = 1)
 }

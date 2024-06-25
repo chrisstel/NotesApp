@@ -5,28 +5,49 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
+import com.example.notes.data.database.room.entity.RoomNote
 import com.example.notes.databinding.FragmentMainBinding
+import com.example.notes.ui.main.recyclerview.NoteAdapter
+import com.example.notes.ui.main.viewmodel.MainViewModel
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainFragment : Fragment() {
-    private lateinit var binding: FragmentMainBinding
-    private val viewModel: MainViewModel by viewModels()
+    private var binding: FragmentMainBinding? = null
+    private val viewModel: MainViewModel by viewModel()
+    private val adapter: NoteAdapter? get() = views { recyclerViewNotes.adapter as? NoteAdapter }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentMainBinding.inflate(layoutInflater, container, false)
-        return binding.root
-    }
+    ): View = FragmentMainBinding.inflate(layoutInflater, container, false).also { binding = it }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        setupRecycleView()
+        views {
+            recyclerViewNotes.adapter = NoteAdapter()
+            imageViewAddNote.setOnClickListener {
+                saveNote()
+            }
+        }
+
+        viewModel.notes.onEach(::renderNotes).launchIn(lifecycleScope)
     }
 
-    private fun setupRecycleView() {
+    private fun renderNotes(notes: List<RoomNote>) { adapter?.submitList(notes) }
+
+    private fun saveNote() {
+        views {
+            val text = editTextAddNote.text.toString().takeIf { it.isNotBlank() } ?: return@views
+
+            viewModel.saveNote(text = text)
+            editTextAddNote.text.clear()
+        }
     }
+
+    private fun <T> views(block: FragmentMainBinding.() -> T): T? = binding?.block()
 }
