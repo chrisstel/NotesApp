@@ -1,5 +1,6 @@
 package com.example.notes.ui.main
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,11 +10,13 @@ import androidx.lifecycle.lifecycleScope
 import com.example.notes.data.database.room.entity.RoomNote
 import com.example.notes.databinding.FragmentMainBinding
 import com.example.notes.ui.main.recyclerview.NoteAdapter
+import com.example.notes.ui.main.recyclerview.SwipeHelper
 import com.example.notes.ui.main.viewmodel.MainViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@SuppressLint("ClickableViewAccessibility")
 class MainFragment : Fragment() {
     private var binding: FragmentMainBinding? = null
     private val viewModel: MainViewModel by viewModel()
@@ -30,11 +33,11 @@ class MainFragment : Fragment() {
 
         views {
             recyclerViewNotes.adapter = NoteAdapter()
+            SwipeHelper(viewModel::deleteNote).attachToRecyclerView(recyclerViewNotes)
             imageViewAddNote.setOnClickListener {
                 saveNote()
             }
         }
-
         viewModel.notes.onEach(::renderNotes).launchIn(lifecycleScope)
     }
 
