@@ -3,7 +3,7 @@ package com.example.notes.ui.main.viewmodel
 import android.text.format.DateFormat
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.notes.data.database.room.entity.RoomNote
+import com.example.notes.domain.data.Note
 import com.example.notes.domain.usecase.DeleteNoteUseCase
 import com.example.notes.domain.usecase.GetAllNotesUseCase
 import com.example.notes.domain.usecase.SaveNoteUseCase
@@ -26,11 +26,11 @@ class MainViewModel(
         saveNoteUseCase.save(createNote(text))
     }
 
-    fun deleteNote(note: RoomNote) = viewModelScope.launch {
+    fun deleteNote(note: Note) = viewModelScope.launch {
         deleteNoteUseCase.delete(note)
     }
 
-    private fun createNote(text: String) = RoomNote(
+    private fun createNote(text: String) = Note(
         caption = createCaption(),
         text = text
     )

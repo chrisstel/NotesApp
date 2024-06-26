@@ -1,6 +1,6 @@
 package com.example.notes.ui.main.recyclerview
 
 import androidx.recyclerview.widget.ItemTouchHelper
-import com.example.notes.data.database.room.entity.RoomNote
+import com.example.notes.domain.data.Note
 
-class SwipeHelper(onSwiped: (RoomNote) -> Unit) : ItemTouchHelper(SwipeCallback(onSwiped))
+class SwipeHelper(onSwiped: (Note) -> Unit) : ItemTouchHelper(SwipeCallback(onSwiped))

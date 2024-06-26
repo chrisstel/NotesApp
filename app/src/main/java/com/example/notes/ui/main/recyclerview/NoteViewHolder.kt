@@ -3,11 +3,11 @@ package com.example.notes.ui.main.recyclerview
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.notes.data.database.room.entity.RoomNote
 import com.example.notes.databinding.NoteItemBinding
+import com.example.notes.domain.data.Note
 
 class NoteViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHolder(binding.root) {
-    var item: RoomNote? = null
+    var item: Note? = null
         private set
 
     companion object {
@@ -18,7 +18,7 @@ class NoteViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHo
         ).let(::NoteViewHolder)
     }
 
-    fun bind(note: RoomNote) {
+    fun bind(note: Note) {
         this.item = note
 
         views {

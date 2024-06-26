@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Notes</string>
     <string name="type_here_hint">Type here…</string>
+    <string name="description_image_view_add_note">Add note</string>
 </resources>

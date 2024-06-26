@@ -2,9 +2,9 @@ package com.example.notes.ui.main.recyclerview
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
-import com.example.notes.data.database.room.entity.RoomNote
+import com.example.notes.domain.data.Note
 
-class NoteAdapter : ListAdapter<RoomNote, NoteViewHolder>(
+class NoteAdapter : ListAdapter<Note, NoteViewHolder>(
     NoteDiffCallback()
 ) {
 

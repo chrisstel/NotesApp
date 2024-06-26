@@ -1,13 +1,13 @@
 package com.example.notes.data.database
 
-import com.example.notes.data.database.room.entity.RoomNote
+import com.example.notes.domain.data.Note
 import kotlinx.coroutines.flow.Flow
 
 interface NoteStorage {
 
-    fun getAllNotes(): Flow<List<RoomNote>>
+    fun getAllNotes(): Flow<List<Note>>
 
-    suspend fun save(note: RoomNote)
+    suspend fun save(note: Note)
 
-    suspend fun delete(note: RoomNote)
+    suspend fun delete(note: Note)
 }
