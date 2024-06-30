@@ -18,5 +18,4 @@ class SwipeCallback(private val onSwiped: (Note) -> Unit) : ItemTouchHelper.Simp
     override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
         (viewHolder as? NoteViewHolder)?.item?.let { onSwiped(it) }
     }
-
 }

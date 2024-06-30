@@ -11,5 +11,4 @@ class NoteAdapter : ListAdapter<Note, NoteViewHolder>(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder = NoteViewHolder.create(parent)
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) = holder.bind(getItem(position))
-
 }

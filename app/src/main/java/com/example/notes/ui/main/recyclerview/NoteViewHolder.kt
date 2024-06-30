@@ -11,6 +11,7 @@ class NoteViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHo
         private set
 
     companion object {
+
         fun create(parent: ViewGroup) = NoteItemBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,

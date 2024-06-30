@@ -1,8 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.Notes" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:colorBackground">@color/pink</item>
+        <item name="android:textColorHint">@color/brown</item>
+        <item name="android:textColorPrimary">@color/light_brown</item>
+        <item name="fontFamily">@font/nunito</item>
     </style>
 
     <style name="Theme.Notes" parent="Base.Theme.Notes" />

@@ -17,18 +17,12 @@ class MainViewModel(
     getAllNotesUseCase: GetAllNotesUseCase,
     private val saveNoteUseCase: SaveNoteUseCase,
     private val deleteNoteUseCase: DeleteNoteUseCase
-
 ) : ViewModel() {
-
     val notes = getAllNotesUseCase.getAll().asLiveDataFlow()
 
-    fun saveNote(text: String) = viewModelScope.launch {
-        saveNoteUseCase.save(createNote(text))
-    }
+    fun saveNote(text: String) = viewModelScope.launch { saveNoteUseCase.save(createNote(text)) }
 
-    fun deleteNote(note: Note) = viewModelScope.launch {
-        deleteNoteUseCase.delete(note)
-    }
+    fun deleteNote(note: Note) = viewModelScope.launch { deleteNoteUseCase.delete(note) }
 
     private fun createNote(text: String) = Note(
         caption = createCaption(),
