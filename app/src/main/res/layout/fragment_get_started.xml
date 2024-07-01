@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/app_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="6sp"
         android:autoSizeTextType="uniform"
-        android:text="Note App"
+        android:gravity="center"
+        android:text="@string/app_name"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/guideline14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@id/guideline13" />
 
     <ImageView
         android:id="@+id/get_started_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="26dp"
+        android:contentDescription="@string/get_started_image_description"
         android:src="@drawable/image_get_started"
         app:layout_constraintBottom_toBottomOf="@id/guideline8"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toTopOf="@id/guideline7" />
+        app:layout_constraintTop_toTopOf="@id/guideline7"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/app_headline"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:autoSizeMaxTextSize="24sp"
+        android:autoSizeMinTextSize="8sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="World’s Safest And \nLargest Digital Notebook"
-        android:autoSizeMaxTextSize="24sp"
+        android:text="@string/app_headline"
+        android:textSize="24sp"
         android:textStyle="bold"
-        android:autoSizeStepGranularity="1sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline9"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
@@ -46,9 +53,11 @@
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="5sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="Notely is the world’s safest, largest and \nintelligent digital notebook. Join over \n10M+ users already using Notely."
+        android:text="@string/app_description"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline4"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -57,11 +66,12 @@
 
     <Button
         android:id="@+id/get_started_button"
-        android:layout_width="0dp"
+        android:layout_width="320dp"
         android:layout_height="0dp"
-        android:text="Get started"
-        android:autoSizeTextType="uniform"
         android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="4sp"
+        android:autoSizeTextType="uniform"
+        android:text="@string/get_started"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@id/guideline11"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -73,14 +83,16 @@
         android:id="@+id/already_have_text"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="4sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="Already have an account?"
+        android:text="@string/already_have_an_account"
         android:textSize="16sp"
-        app:layout_constraintTop_toTopOf="@id/guideline12"
         app:layout_constraintBottom_toBottomOf="@id/guideline5"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="@id/guideline12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -165,6 +177,20 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9216" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0209" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.051" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
