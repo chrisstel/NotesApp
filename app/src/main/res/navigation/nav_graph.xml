@@ -1,20 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/getStartedFragment">
 
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.notes.ui.main.MainFragment"
-        android:label="MainFragment" />
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/getStartedFragment"
         android:name="com.example.notes.ui.getstarted.GetStartedFragment"
-        android:label="GetStartedFragment" >
+        android:label="GetStartedFragment"
+        tools:layout="@layout/fragment_get_started">
         <action
-            android:id="@+id/action_getStartedFragment_to_mainFragment"
+            android:id="@+id/action_getStartedFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_getStartedFragment_to_createAccountFragment"
+            app:destination="@id/createAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.notes.ui.signin.SignInFragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_sign_in">
+        <action
+            android:id="@+id/action_signInFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/createAccountFragment"
+        android:name="com.example.notes.ui.createaccount.CreateAccountFragment"
+        android:label="CreateAccountFragment"
+        tools:layout="@layout/fragment_create_account" />
 
 </navigation>
