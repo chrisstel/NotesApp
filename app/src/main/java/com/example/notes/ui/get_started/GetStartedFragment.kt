@@ -1,4 +1,4 @@
-package com.example.notes.ui.getstarted
+package com.example.notes.ui.get_started
 
 import android.os.Bundle
 import android.view.LayoutInflater

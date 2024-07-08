@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/getStartedFragment"
-        android:name="com.example.notes.ui.getstarted.GetStartedFragment"
+        android:name="com.example.notes.ui.get_started.GetStartedFragment"
         android:label="GetStartedFragment"
         tools:layout="@layout/fragment_get_started">
         <action
@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.example.notes.ui.signin.SignInFragment"
+        android:name="com.example.notes.ui.sign_in.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
         <action
@@ -33,8 +33,15 @@
     </fragment>
     <fragment
         android:id="@+id/createAccountFragment"
-        android:name="com.example.notes.ui.createaccount.CreateAccountFragment"
+        android:name="com.example.notes.ui.create_account.CreateAccountFragment"
         android:label="CreateAccountFragment"
-        tools:layout="@layout/fragment_create_account" />
+        tools:layout="@layout/fragment_create_account" >
+        <action
+            android:id="@+id/action_createAccountFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_createAccountFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
 
 </navigation>
