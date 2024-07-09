@@ -19,7 +19,7 @@ class CreateAccountFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? = FragmentCreateAccountBinding.inflate(layoutInflater, container, false)
+    ): View = FragmentCreateAccountBinding.inflate(layoutInflater, container, false)
         .also { binding = it }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,7 +31,9 @@ class CreateAccountFragment : Fragment() {
             }
 
             getStartedButton.setOnClickListener {
-                ///
+                signUp()
+
+                handleSignUpResult()
             }
         }
     }
@@ -40,11 +42,29 @@ class CreateAccountFragment : Fragment() {
         findNavController().navigate(R.id.action_createAccountFragment_to_signInFragment)
     }
 
-    private fun clearViews() {
+    private fun signUp() {
         views {
-            fullName.text.clear()
-            emailAddress.text.clear()
-            password.text.clear()
+            val nickname = nickname.text.toString()
+            val emailAddress = emailAddress.text.toString()
+            val password = password.text.toString()
+
+            viewModel.signUp(
+                nickname = nickname,
+                emailAddress = emailAddress,
+                password = password
+            )
+        }
+    }
+
+    private fun handleSignUpResult() {
+        viewModel.signUpResult.observe(viewLifecycleOwner) { registration ->
+            views {
+                nickname.error = registration.nicknameError
+                emailAddress.error = registration.emailAddressError
+                password.error = registration.passwordError
+            }
+
+            //TODO: SUCCESS HANDLING
         }
     }
 
