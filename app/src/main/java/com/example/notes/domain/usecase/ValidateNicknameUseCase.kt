@@ -4,16 +4,15 @@ import com.example.notes.domain.data.ValidationResult
 
 class ValidateNicknameUseCase {
 
-    fun validate(nickname: String): ValidationResult {
-        if (nickname.isBlank()) {
-            return ValidationResult(
-                successful = false,
-                message = "Nickname can't be blank"
+    operator fun invoke(nickname: String): ValidationResult = when {
+        blank(nickname) -> {
+            ValidationResult.Error(
+                message = "The nickname can't be empty"
             )
         }
 
-        return ValidationResult(
-            successful = true
-        )
+        else -> ValidationResult.Success
     }
+
+    private fun blank(nickname: String): Boolean = nickname.isBlank()
 }

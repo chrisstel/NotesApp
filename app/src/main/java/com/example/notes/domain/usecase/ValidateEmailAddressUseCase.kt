@@ -5,23 +5,22 @@ import com.example.notes.domain.data.ValidationResult
 
 class ValidateEmailAddressUseCase {
 
-    fun validate(email: String): ValidationResult {
-        if (email.isBlank()) {
-            return ValidationResult(
-                successful = false,
+    operator fun invoke(email: String): ValidationResult = when {
+        blank(email) -> {
+            ValidationResult.Error(
                 message = "The email address can't be blank"
             )
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            return ValidationResult(
-                successful = false,
+        noMatch(email) -> {
+            ValidationResult.Error(
                 message = "This email is not valid"
             )
         }
 
-        return ValidationResult(
-            successful = true
-        )
+        else -> ValidationResult.Success
     }
+
+    private fun blank(email: String): Boolean = email.isBlank()
+    private fun noMatch(email: String): Boolean = !Patterns.EMAIL_ADDRESS.matcher(email).matches()
 }

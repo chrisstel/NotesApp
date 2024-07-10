@@ -1,7 +1,7 @@
 package com.example.notes.domain.data
 
 data class ValidationFormState(
-    val nicknameError: String? = null,
-    val emailAddressError: String? = null,
-    val passwordError: String? = null,
+    var nicknameError: String? = null,
+    var emailAddressError: String? = null,
+    var passwordError: String? = null,
 )

@@ -1,6 +1,6 @@
 package com.example.notes.domain.data
 
-data class ValidationResult(
-    val successful: Boolean,
-    val message: String? = null
-)
+sealed class ValidationResult {
+    data object Success : ValidationResult()
+    data class Error(val message: String) : ValidationResult()
+}
