@@ -32,7 +32,7 @@ class CreateAccountFragment : Fragment() {
         views {
             alreadyHaveText.setOnClickListener { signIn() }
 
-            getStartedButton.setOnClickListener {
+            createAccountButton.setOnClickListener {
                 signUp()
                 handleSignUpResult()
             }

@@ -7,4 +7,5 @@
     <string name="get_started">Get started</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="get_started_image_description">Get started image</string>
+    <string name="create_account_button_text">Create account</string>
 </resources>
