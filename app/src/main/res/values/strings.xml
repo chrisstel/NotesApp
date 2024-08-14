@@ -3,9 +3,12 @@
     <string name="type_here_hint">Type here…</string>
     <string name="description_image_view_add_note">Add note</string>
     <string name="app_headline">World’s Safest And \nLargest Digital Notebook</string>
-    <string name="app_description">Notes is the world’s safest, largest and \nintelligent digital notebook. Join over \n10M+ users already using Notes.</string>
-    <string name="get_started">Get started</string>
+    <string name="app_headline2"></string>
+    <string name="app_description">Notes is the world’s safest, largest and\nintelligent digital notebook. Join over \n10M+ users already using Notes.</string>
+    <string name="app_description2">Thoughts, ideas and plans. Write everything you need and keep\nin one place</string>
+    <string name="get_started">get started</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="get_started_image_description">Get started image</string>
     <string name="create_account_button_text">Create account</string>
+    <string name="app_description_land">Notes is the world’s safest, largest and \n intelligent digital notebook.</string>
 </resources>
