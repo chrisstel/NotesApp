@@ -18,9 +18,6 @@
         app:layout_constraintStart_toStartOf="@id/get_started_g1"
         app:layout_constraintTop_toTopOf="@id/get_started_g3" />
 
-
-
-
     <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
