@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -24,29 +23,13 @@
 <!--    app:layout_constraintBottom_toBottomOf="@id/get_started_g4"-->
 
     <TextView
-        android:id="@+id/app_headline"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="26sp"
-        android:autoSizeMinTextSize="8sp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:text="@string/app_headline2"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/get_started_g6"
-        app:layout_constraintEnd_toEndOf="@id/get_started_g2"
-        app:layout_constraintStart_toStartOf="@id/get_started_g1"
-        app:layout_constraintTop_toTopOf="@id/get_started_g5" />
-
-    <TextView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autoSizeMaxTextSize="18sp"
         android:autoSizeMinTextSize="5sp"
         android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:text="@string/app_description2"
+        android:text="@string/app_description"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/get_started_g8"
         app:layout_constraintEnd_toEndOf="@id/get_started_g2"
@@ -84,6 +67,8 @@
         app:layout_constraintStart_toStartOf="@id/get_started_g1"
         app:layout_constraintTop_toTopOf="@id/get_started_g11" />
 
+<!--    Guidelines-->
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/get_started_g1"
         android:layout_width="wrap_content"
@@ -104,8 +89,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.18" />
-
-<!--    0209-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/get_started_g4"
