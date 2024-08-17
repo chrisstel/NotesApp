@@ -8,4 +8,11 @@
     <string name="get_started_image_description">Get started image</string>
     <string name="create_account_button_text">Create account</string>
     <string name="app_description_land">Notes is the world’s safest, largest and \n intelligent digital notebook.</string>
+    <string name="create_account_text">Create account</string>
+    <string name="create_account_description">Write down your thoughts right now.\nJoin Notes. It\'s free</string>
+    <string name="create_account_description2">Join Notes for free. Create and share\nunlimited notes with your friends.</string>
+    <string name="nickname_label">Nickname</string>
+    <string name="type_hint">Type…</string>
+    <string name="email_address_label">Email address</string>
+    <string name="password_label">Password</string>
 </resources>

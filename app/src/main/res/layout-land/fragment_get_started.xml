@@ -11,9 +11,8 @@
         android:gravity="center"
         android:text="@string/app_name"
         android:textSize="44sp"
-        android:textStyle="bold"
+        style="@style/AppHeader"
         app:layout_constraintBottom_toBottomOf="@id/get_started_g4"
-        app:fontFamily="@font/recolors"
         app:layout_constraintEnd_toEndOf="@id/get_started_g2"
         app:layout_constraintStart_toStartOf="@id/get_started_g1"
         app:layout_constraintTop_toTopOf="@id/get_started_g3" />

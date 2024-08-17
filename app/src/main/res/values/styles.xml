@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="AppHeader" parent="TextAppearance.AppCompat">
+        <item name="fontFamily">@font/recolors</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">42sp</item>
+    </style>
 </resources>

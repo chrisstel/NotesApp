@@ -4,55 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/app_title"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="20sp"
-        android:autoSizeMinTextSize="6sp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:text="@string/app_name"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/create_account_g4"
-        app:layout_constraintEnd_toEndOf="@id/create_account_g2"
-        app:layout_constraintStart_toStartOf="@id/create_account_g1"
-        app:layout_constraintTop_toTopOf="@id/create_account_g3" />
+<!--    <TextView-->
+<!--        android:id="@+id/app_title"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:text="@string/app_name"-->
+<!--        android:textSize="30sp"-->
+<!--        style="@style/AppHeader"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/create_account_g4"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/create_account_g2"-->
+<!--        app:layout_constraintStart_toStartOf="@id/create_account_g1"-->
+<!--        app:layout_constraintTop_toTopOf="@id/create_account_g3" />-->
+
+<!--    android:autoSizeMaxTextSize="30sp"-->
+<!--    android:autoSizeMinTextSize="6sp"-->
+<!--    android:autoSizeTextType="uniform"-->
 
     <TextView
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="24sp"
-        android:autoSizeMinTextSize="10sp"
-        android:autoSizeTextType="uniform"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Create a free account"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:text="@string/create_account_text"
+        android:textSize="27sp"
+        android:autoSizeMaxTextSize="27sp"
+        android:autoSizeMinTextSize="18sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@id/create_account_g12"
         app:layout_constraintEnd_toEndOf="@id/create_account_g2"
         app:layout_constraintStart_toStartOf="@id/create_account_g1"
         app:layout_constraintTop_toTopOf="@id/create_account_g11" />
 
+<!--    android:autoSizeMaxTextSize="24sp"-->
+<!--    android:autoSizeMinTextSize="10sp"-->
+<!--    android:autoSizeTextType="uniform"-->
+
     <TextView
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="16sp"
-        android:autoSizeMinTextSize="8sp"
-        android:autoSizeTextType="uniform"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Join Notes for free. Create and share\nunlimited notes with your friends."
-        android:textSize="16sp"
+        android:text="@string/create_account_description"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="@id/create_account_g14"
         app:layout_constraintEnd_toEndOf="@id/create_account_g2"
         app:layout_constraintStart_toStartOf="@id/create_account_g1"
         app:layout_constraintTop_toTopOf="@id/create_account_g13" />
 
+<!--    android:autoSizeMaxTextSize="18sp"-->
+<!--    android:autoSizeMinTextSize="8sp"-->
+<!--    android:autoSizeTextType="uniform"-->
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
 
         app:layout_constraintBottom_toBottomOf="@id/create_account_g6"
@@ -64,10 +70,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoSizeMaxTextSize="16sp"
-            android:autoSizeMinTextSize="4sp"
-            android:autoSizeTextType="uniform"
-            android:text="Nickname" />
+            android:textSize="18sp"
+            android:text="@string/nickname_label" />
 
         <EditText
             android:id="@+id/nickname"
@@ -75,39 +79,19 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="21dp"
             android:autofillHints="username"
-            android:hint="Type..."
+            android:hint="@string/type_hint"
             android:inputType="textEmailAddress"
             android:minHeight="48dp" />
-
-        <!--        <com.google.android.material.textfield.TextInputLayout-->
-        <!--            android:id="@+id/nickname_layout"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="wrap_content"-->
-        <!--            app:hintEnabled="false"-->
-        <!--            style="@style/Widget.Material3.TextInputLayout.FilledBox"-->
-        <!--            app:errorEnabled="true"-->
-        <!--            android:minHeight="48dp">-->
-
-        <!--            <com.google.android.material.textfield.TextInputEditText-->
-        <!--                android:id="@+id/nickname"-->
-        <!--                android:maxLines="1"-->
-        <!--                android:hint="Bebe Boba"-->
-        <!--                android:gravity="start"-->
-        <!--                android:layout_width="match_parent"-->
-        <!--                android:layout_height="wrap_content"-->
-        <!--                android:inputType="textPersonName"-->
-
-        <!--                android:autofillHints="username"/>-->
-
-        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoSizeMaxTextSize="16sp"
-            android:autoSizeMinTextSize="4sp"
-            android:autoSizeTextType="uniform"
-            android:text="Email address" />
+            android:textSize="18sp"
+            android:text="@string/email_address_label" />
+
+<!--        android:autoSizeMaxTextSize="18sp"-->
+<!--        android:autoSizeMinTextSize="4sp"-->
+<!--        android:autoSizeTextType="uniform"-->
 
         <EditText
             android:id="@+id/email_address"
@@ -115,24 +99,26 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="21dp"
             android:autofillHints="emailAddress"
-            android:hint="Type..."
+            android:hint="@string/type_hint"
             android:inputType="textEmailAddress"
             android:minHeight="48dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autoSizeMaxTextSize="16sp"
-            android:autoSizeMinTextSize="4sp"
-            android:autoSizeTextType="uniform"
-            android:text="Password" />
+            android:textSize="18sp"
+            android:text="@string/password_label" />
+
+<!--        android:autoSizeMaxTextSize="18sp"-->
+<!--        android:autoSizeMinTextSize="4sp"-->
+<!--        android:autoSizeTextType="uniform"-->
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="password"
-            android:hint="Type..."
+            android:hint="@string/type_hint"
             android:inputType="textPassword"
             android:minHeight="48dp" />
     </LinearLayout>
@@ -182,19 +168,19 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9253" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/create_account_g3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.0209" />
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/create_account_g3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.0209" />-->
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/create_account_g4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.051" />
+<!--    <androidx.constraintlayout.widget.Guideline-->
+<!--        android:id="@+id/create_account_g4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintGuide_percent="0.072" />-->
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g5"
@@ -208,7 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6876" />
+        app:layout_constraintGuide_percent="0.69" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g7"
@@ -243,27 +229,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.132" />
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1752" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1817" />
+        app:layout_constraintGuide_percent="0.17" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.2392" />
+        app:layout_constraintGuide_percent="0.23" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
