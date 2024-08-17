@@ -30,7 +30,7 @@ class CreateAccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         views {
-            alreadyHaveText.setOnClickListener { signIn() }
+            alreadyHaveAccountText.setOnClickListener { signIn() }
 
             createAccountButton.setOnClickListener {
                 signUp()

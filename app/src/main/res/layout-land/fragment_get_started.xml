@@ -48,7 +48,7 @@
         app:layout_constraintWidth_max="320dp" />
 
     <TextView
-        android:id="@+id/already_have_text"
+        android:id="@+id/already_have_account_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:autoSizeMaxTextSize="18sp"

@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         currentFocus?.let { currFocus ->
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.hideSoftInputFromWindow(currFocus.windowToken, 0)
+            currFocus.clearFocus()
         }
         return super.dispatchTouchEvent(ev)
     }

@@ -19,7 +19,6 @@ class GetStartedFragment : Fragment() {
     ): View = FragmentGetStartedBinding.inflate(layoutInflater, container, false)
         .also { binding = it }.root
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -28,7 +27,7 @@ class GetStartedFragment : Fragment() {
                 findNavController().navigate(R.id.action_getStartedFragment_to_createAccountFragment)
             }
 
-            alreadyHaveText.setOnClickListener {
+            alreadyHaveAccountText.setOnClickListener {
                 findNavController().navigate(R.id.action_getStartedFragment_to_signInFragment)
             }
         }
