@@ -11,8 +11,15 @@ class ValidateNicknameUseCase {
             )
         }
 
+        tooLong(nickname) -> {
+            ValidationResult.Error(
+                message = "The nickname must be shorter"
+            )
+        }
+
         else -> ValidationResult.Success
     }
 
     private fun blank(nickname: String): Boolean = nickname.isBlank()
+    private fun tooLong(nickname: String): Boolean = nickname.length > 10
 }

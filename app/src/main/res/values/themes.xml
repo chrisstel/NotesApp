@@ -3,6 +3,7 @@
     <style name="Base.Theme.Notes" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/black</item>
         <!--        <item name="colorError">#44FF00</item>-->
+        <item name="android:textColorHighlight">@color/grey_200</item>
         <item name="android:colorBackground">@color/light_grey</item>
         <item name="materialButtonStyle">@style/Widget.Notes.Button.Custom</item>
         <item name="android:textColor">@color/black</item>

@@ -56,13 +56,16 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:paddingBottom="15dp"
-            app:errorEnabled="true">
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterMaxLength="15">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/nickname_label"
+                android:autofillHints="username"
                 android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -84,6 +87,7 @@
                 android:id="@+id/email_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:autofillHints="emailAddress"
                 android:hint="@string/email_address_label"
                 android:inputType="textEmailAddress" />
 
