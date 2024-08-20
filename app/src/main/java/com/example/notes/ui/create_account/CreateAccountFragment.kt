@@ -65,9 +65,9 @@ class CreateAccountFragment : Fragment() {
     private fun onFail() {
         viewModel.validationState.observe(viewLifecycleOwner) { registration ->
             views {
-                nickname.error = registration.nicknameError
-                emailAddress.error = registration.emailAddressError
-                password.error = registration.passwordError
+                nicknameLayout.error = registration.nicknameError
+                emailAddressLayout.error = registration.emailAddressError
+                passwordLayout.error = registration.passwordError
             }
         }
     }

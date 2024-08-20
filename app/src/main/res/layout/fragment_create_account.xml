@@ -50,60 +50,67 @@
         app:layout_constraintTop_toTopOf="@id/create_account_g5"
         app:layout_constraintWidth_max="320dp">
 
-        <TextView
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nickname_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nickname_label"
-            android:textSize="18sp" />
+            android:minHeight="48dp"
+            android:paddingBottom="15dp"
+            app:errorEnabled="true">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="21dp"
-                android:autofillHints="username"
-                android:hint="@string/type_hint"
-                android:inputType="textEmailAddress"
-                android:minHeight="48dp" />
+                android:hint="@string/nickname_label"
+                android:inputType="textPersonName" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/email_address_label"
-            android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!--        android:autoSizeMaxTextSize="18sp"-->
         <!--        android:autoSizeMinTextSize="4sp"-->
         <!--        android:autoSizeTextType="uniform"-->
 
-        <EditText
-            android:id="@+id/email_address"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_address_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="21dp"
             android:autofillHints="emailAddress"
-            android:hint="@string/type_hint"
-            android:inputType="textEmailAddress"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:paddingBottom="15dp"
+            app:errorEnabled="true">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/password_label"
-            android:textSize="18sp" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_address_label"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
         <!--        android:autoSizeMaxTextSize="18sp"-->
         <!--        android:autoSizeMinTextSize="4sp"-->
         <!--        android:autoSizeTextType="uniform"-->
 
-        <EditText
-            android:id="@+id/password"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints="password"
-            android:hint="@string/type_hint"
-            android:inputType="textPassword"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            app:errorEnabled="true"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password_label"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
     </LinearLayout>
 
     <Button
@@ -151,12 +158,12 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9253" />
 
-    <!--    <androidx.constraintlayout.widget.Guideline-->
-    <!--        android:id="@+id/create_account_g3"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        app:layout_constraintGuide_percent="0.0209" />-->
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:id="@+id/create_account_g3"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintGuide_percent="0.0209" />-->
 
     <!--    <androidx.constraintlayout.widget.Guideline-->
     <!--        android:id="@+id/create_account_g4"-->
