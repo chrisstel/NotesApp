@@ -15,4 +15,8 @@
     <string name="type_hint">Type…</string>
     <string name="email_address_label">Email address</string>
     <string name="password_label">Password</string>
+    <string name="sign_in_text">Sign in</string>
+    <string name="sign_in_description">Welcome back! Can\'t wait for you \n to make new notes</string>
+    <string name="dont_have_an_account">Don\'t have an account? <font color="#FF1976D2">Create it</font></string>
+    <string name="create_it">Create it</string>
 </resources>
