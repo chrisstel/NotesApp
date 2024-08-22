@@ -138,21 +138,6 @@
         app:layout_constraintTop_toTopOf="@id/create_account_g14"
         app:layout_constraintWidth_max="320dp" />
 
-    <TextView
-        android:id="@+id/already_have_account_text"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:autoSizeMaxTextSize="16sp"
-        android:autoSizeMinTextSize="4sp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:text="@string/already_have_an_account"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/create_account_button"
-        app:layout_constraintStart_toStartOf="@id/create_account_button"
-        app:layout_constraintTop_toBottomOf="@id/create_account_button" />
-
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g1"
         android:layout_width="wrap_content"

@@ -30,17 +30,11 @@ class CreateAccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         views {
-            alreadyHaveAccountText.setOnClickListener { signIn() }
-
             createAccountButton.setOnClickListener {
                 signUp()
                 handleSignUpResult()
             }
         }
-    }
-
-    private fun signIn() {
-        findNavController().navigate(R.id.action_createAccountFragment_to_signInFragment)
     }
 
     private fun signUp() {

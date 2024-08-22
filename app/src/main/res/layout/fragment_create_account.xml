@@ -56,16 +56,16 @@
             android:layout_height="wrap_content"
             android:minHeight="48dp"
             android:paddingBottom="15dp"
-            app:errorEnabled="true"
             app:counterEnabled="true"
-            app:counterMaxLength="15">
+            app:counterMaxLength="15"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nickname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/nickname_label"
                 android:autofillHints="username"
+                android:hint="@string/nickname_label"
                 android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -103,8 +103,8 @@
             android:layout_height="wrap_content"
             android:autofillHints="password"
             android:minHeight="48dp"
-            app:errorEnabled="true"
-            app:endIconMode="password_toggle">
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/password"
@@ -132,22 +132,6 @@
         app:layout_constraintTop_toTopOf="@id/create_account_g7"
         app:layout_constraintWidth_max="320dp" />
 
-    <TextView
-        android:id="@+id/already_have_account_text"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:autoSizeMaxTextSize="16sp"
-        android:autoSizeMinTextSize="4sp"
-        android:autoSizeTextType="uniform"
-        android:gravity="center"
-        android:text="@string/already_have_an_account"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@id/create_account_g10"
-        app:layout_constraintEnd_toEndOf="@id/create_account_g2"
-        app:layout_constraintStart_toStartOf="@id/create_account_g1"
-        app:layout_constraintTop_toTopOf="@id/create_account_g9" />
-
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g1"
         android:layout_width="wrap_content"
@@ -162,12 +146,12 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9253" />
 
-<!--        <androidx.constraintlayout.widget.Guideline-->
-<!--            android:id="@+id/create_account_g3"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal"-->
-<!--            app:layout_constraintGuide_percent="0.0209" />-->
+    <!--        <androidx.constraintlayout.widget.Guideline-->
+    <!--            android:id="@+id/create_account_g3"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            app:layout_constraintGuide_percent="0.0209" />-->
 
     <!--    <androidx.constraintlayout.widget.Guideline-->
     <!--        android:id="@+id/create_account_g4"-->
@@ -195,28 +179,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.7987" />
+        app:layout_constraintGuide_percent="0.83" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.8954" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/create_account_g9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.9216" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/create_account_g10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.93" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/create_account_g11"
