@@ -108,6 +108,7 @@
         app:layout_constraintWidth_max="320dp" />
 
         <TextView
+            android:id="@+id/dont_have_account_text"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:autoSizeMaxTextSize="16sp"

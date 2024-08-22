@@ -22,14 +22,18 @@ class GetStartedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        views {
-            getStartedButton.setOnClickListener {
-                findNavController().navigate(R.id.action_getStartedFragment_to_createAccountFragment)
-            }
+        goToGetStarted()
+        goToSignIn()
+    }
 
-            alreadyHaveAccountText.setOnClickListener {
-                findNavController().navigate(R.id.action_getStartedFragment_to_signInFragment)
-            }
+    private fun goToGetStarted() = views {
+        getStartedButton.setOnClickListener {
+            findNavController().navigate(R.id.action_getStartedFragment_to_createAccountFragment)
+        }
+    }
+    private fun goToSignIn() = views {
+        alreadyHaveAccountText.setOnClickListener {
+            findNavController().navigate(R.id.action_getStartedFragment_to_signInFragment)
         }
     }
 
