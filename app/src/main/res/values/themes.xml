@@ -7,9 +7,12 @@
         <item name="android:colorBackground">@color/light_grey</item>
         <item name="materialButtonStyle">@style/Widget.Notes.Button.Custom</item>
         <item name="android:textColor">@color/black</item>
+        <item name="android:statusBarColor">@color/light_grey</item>
         <item name="fontFamily">@font/nt_somic</item>
         <item name="textAppearanceCaption">@style/TextAppearance.Notes.Caption</item>
         <item name="textInputStyle">@style/Widget.Notes.TextInputLayout.Custom</item>
+        <item name="toolbarStyle">@style/Widget.Notes.Toolbar.Custom</item>
+        <item name="materialSearchBarStyle">@style/Widget.Notes.SearchBar.Custom</item>
     </style>
 
     <style name="Theme.Notes" parent="Base.Theme.Notes" />
@@ -35,5 +38,37 @@
         <item name="cursorErrorColor">@color/black</item>
         <item name="cursorColor">@color/black</item>
         <item name="boxBackgroundColor">?attr/android:colorBackground</item>
+    </style>
+
+    <!--    Toolbar-->
+    <style name="Widget.Notes.Toolbar.Custom" parent="Widget.MaterialComponents.Toolbar.Primary">
+        <item name="android:elevation">0dp</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Notes.Toolbar</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Notes.Headline6</item>
+        <item name="subtitleTextAppearance">@style/TextAppearance.Notes.Subtitle1</item>
+    </style>
+
+    <style name="ThemeOverlay.Notes.Toolbar" parent="">
+        <item name="colorPrimary">@color/light_grey</item>
+        <item name="colorOnPrimary">@color/black</item>
+    </style>
+
+    <style name="TextAppearance.Notes.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="fontFamily">@font/nt_somic_regular</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">@font/nt_somic_regular</item>
+    </style>
+
+    <style name="TextAppearance.Notes.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/nt_somic_regular</item>
+        <item name="android:fontFamily">@font/nt_somic_regular</item>
+    </style>
+
+<!--    SearchBar-->
+    <style name="Widget.Notes.SearchBar.Custom" parent="Widget.Material3.SearchBar">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Notes.SearchBar</item>
+    </style>
+
+    <style name="ThemeOverlay.Notes.SearchBar" parent="">
     </style>
 </resources>
