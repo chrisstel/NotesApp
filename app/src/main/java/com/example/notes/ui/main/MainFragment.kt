@@ -8,6 +8,8 @@ import android.view.MenuInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notes.databinding.FragmentMainBinding
 import com.example.notes.domain.data.Note
 import com.example.notes.ui.main.recyclerview.NoteAdapter
@@ -31,27 +33,34 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        setupRecyclerView()
+
         views {
-            recyclerViewNotes.adapter = NoteAdapter()
-            SwipeHelper(viewModel::deleteNote).attachToRecyclerView(recyclerViewNotes)
-            imageViewAddNote.setOnClickListener {
-                saveNote()
-            }
+//            imageViewAddNote.setOnClickListener {
+//                saveNote()
+//            }
         }
 
         viewModel.notes.onEach(::renderNotes).launchIn(lifecycleScope)
     }
 
+    private fun setupRecyclerView() = views {
+        recyclerViewNotes.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+        recyclerViewNotes.adapter = NoteAdapter()
+        SwipeHelper(viewModel::deleteNote).attachToRecyclerView(recyclerViewNotes)
+    }
+
     private fun renderNotes(notes: List<Note>) { adapter?.submitList(notes) }
 
-    private fun saveNote() {
-        views {
-            val text = editTextAddNote.text.toString().takeIf { it.isNotBlank() } ?: return@views
-
-            viewModel.saveNote(text = text)
-            editTextAddNote.text.clear()
-        }
-    }
+//    private fun saveNote() {
+//        views {
+//            val text = editTextAddNote.text.toString().takeIf { it.isNotBlank() } ?: return@views
+//
+//            viewModel.saveNote(text = text)
+//            editTextAddNote.text.clear()
+//        }
+//    }
 
     private fun <T> views(block: FragmentMainBinding.() -> T): T? = binding?.block()
 }

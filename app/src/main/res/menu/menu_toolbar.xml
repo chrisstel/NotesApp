@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/search_item"
-        android:title="More"
-        android:icon="@drawable/baseline_more_vert_24"
+        android:id="@+id/more_item"
+        android:title="@string/more_title"
+        android:icon="@drawable/ic_baseline_more_vert_24"
         app:showAsAction="ifRoom"
         android:orderInCategory="1"/>
 </menu>
