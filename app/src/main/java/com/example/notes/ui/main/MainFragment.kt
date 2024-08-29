@@ -8,10 +8,13 @@ import android.view.MenuInflater
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.notes.R
 import com.example.notes.databinding.FragmentMainBinding
 import com.example.notes.domain.data.Note
+import com.example.notes.ui.AddNoteDialogFragment
 import com.example.notes.ui.main.recyclerview.NoteAdapter
 import com.example.notes.ui.main.recyclerview.SwipeHelper
 import com.example.notes.ui.main.viewmodel.MainViewModel
@@ -40,6 +43,14 @@ class MainFragment : Fragment() {
 //            imageViewAddNote.setOnClickListener {
 //                saveNote()
 //            }
+
+//            floatingButton.setOnClickListener {
+//                AddNoteDialogFragment().show(parentFragmentManager, "ADD_NOTE_FRAGMENT")
+//            }
+
+            floatingButton.setOnClickListener {
+                findNavController().navigate(R.id.action_mainFragment_to_addNoteFragment)
+            }
         }
 
         viewModel.notes.onEach(::renderNotes).launchIn(lifecycleScope)

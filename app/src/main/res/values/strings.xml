@@ -23,4 +23,7 @@
     <string name="search_bar_hint">Search notes</string>
     <string name="fab_content_description">Add new note</string>
     <string name="more_title">More</string>
+    <string name="done_item_title">Done</string>
+    <string name="cancel_button_description">Cancel</string>
+    <string name="save_note_button_description">Save note</string>
 </resources>
