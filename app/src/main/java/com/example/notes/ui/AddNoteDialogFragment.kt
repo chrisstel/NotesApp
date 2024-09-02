@@ -17,5 +17,4 @@ class AddNoteDialogFragment : DialogFragment() {
     ): View? {
         return inflater.inflate(R.layout.dialog_fragment_add_note, container, false)
     }
-
 }

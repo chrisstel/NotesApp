@@ -26,4 +26,5 @@
     <string name="done_item_title">Done</string>
     <string name="cancel_button_description">Cancel</string>
     <string name="save_note_button_description">Save note</string>
+    <string name="new_note_title">New note</string>
 </resources>

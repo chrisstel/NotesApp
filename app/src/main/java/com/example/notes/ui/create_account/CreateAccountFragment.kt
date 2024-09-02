@@ -15,7 +15,6 @@ import kotlinx.coroutines.flow.onEach
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CreateAccountFragment : Fragment() {
-
     private val viewModel: CreateAccountViewModel by viewModel()
     private var binding: FragmentCreateAccountBinding? = null
 
@@ -23,8 +22,7 @@ class CreateAccountFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View = FragmentCreateAccountBinding.inflate(layoutInflater, container, false)
-        .also { binding = it }.root
+    ): View = FragmentCreateAccountBinding.inflate(layoutInflater, container, false).also { binding = it }.root
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
