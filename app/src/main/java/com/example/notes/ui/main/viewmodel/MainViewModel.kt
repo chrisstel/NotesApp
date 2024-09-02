@@ -12,19 +12,11 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(
     getAllNotesUseCase: GetAllNotesUseCase,
-//    private val saveNoteUseCase: SaveNoteUseCase,
     private val deleteNoteUseCase: DeleteNoteUseCase
 ) : ViewModel() {
     val notes = getAllNotesUseCase.getAll().asLiveDataFlow()
 
-//    fun saveNote(text: String) = viewModelScope.launch { saveNoteUseCase.save(createNote(text)) }
-
     fun deleteNote(note: Note) = viewModelScope.launch { deleteNoteUseCase.delete(note) }
 
-//    private fun createNote(text: String) = Note(
-//        caption = createCaption(),
-//        text = text
-//    )
-//    private fun createCaption(): String = DateFormat.format("hh:mm, MM.dd.yyyy", Date()).toString()
     private fun <T> Flow<T>.asLiveDataFlow() = shareIn(viewModelScope, SharingStarted.Eagerly, replay = 1)
 }
