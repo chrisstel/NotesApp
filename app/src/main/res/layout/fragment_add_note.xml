@@ -18,7 +18,7 @@
             android:layout_height="wrap_content">
 
             <ImageView
-                android:id="@+id/cancel_button"
+                android:id="@+id/back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -36,7 +36,7 @@
                 android:text="@string/new_note_title"
                 android:textSize="28sp"
                 app:layout_constraintEnd_toStartOf="@id/save_note_button"
-                app:layout_constraintStart_toEndOf="@id/cancel_button"
+                app:layout_constraintStart_toEndOf="@id/back_button"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
@@ -65,7 +65,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHeight_min="48dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/cancel_button"
+                app:layout_constraintTop_toBottomOf="@id/back_button"
                 app:layout_constraintWidth_max="488dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

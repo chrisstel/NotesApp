@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/content_margin"
-    android:elevation="2dp"
-    app:cardBackgroundColor="@color/light_pink"
-    app:cardCornerRadius="10dp">
+    app:cardBackgroundColor="#F8F8F8"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,12 +16,12 @@
         android:padding="8dp">
 
         <TextView
-            android:id="@+id/TV_caption"
+            android:id="@+id/TV_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/dark_grey"
             android:textSize="12sp"
-            android:textStyle="bold"
-            tools:text="Caption" />
+            tools:text="12.12.2007" />
 
 
         <TextView

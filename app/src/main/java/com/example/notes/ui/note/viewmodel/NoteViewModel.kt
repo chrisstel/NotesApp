@@ -14,7 +14,7 @@ class NoteViewModel(
 
     fun saveNote(text: String) = viewModelScope.launch { saveNoteUseCase.save(createNote(text)) }
     private fun createNote(text: String) = Note(
-        caption = createCaption(),
+        date = createCaption(),
         text = text
     )
     private fun createCaption(): String = DateFormat.format("hh:mm, MM.dd.yyyy", Date()).toString()

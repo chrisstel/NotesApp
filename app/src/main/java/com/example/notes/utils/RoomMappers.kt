@@ -5,12 +5,12 @@ import com.example.notes.domain.data.Note
 
 fun RoomNote.toDomain(): Note = Note(
     id = this.id,
-    caption = this.caption,
+    date = this.caption,
     text = this.text
 )
 
 fun Note.fromDomain(): RoomNote = RoomNote(
     id = this.id,
-    caption = this.caption,
+    caption = this.date,
     text = this.text
 )

@@ -24,7 +24,7 @@ class NoteViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHo
         this.item = note
 
         views {
-            TVCaption.text = note.caption
+            TVDate.text = note.date
             TVText.text = note.text
             root.setOnClickListener { onClick?.invoke(note) }
         }

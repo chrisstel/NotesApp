@@ -9,6 +9,7 @@
     <color name="brown">#403B36</color>
     <color name="light_grey">#ededed</color>
     <color name="grey">#DFDFDF</color>
+    <color name="dark_grey">#505050</color>
     <color name="grey_200">#B1B1B1</color>
     <color name="blue_700">#FF1976D2</color>
 </resources>

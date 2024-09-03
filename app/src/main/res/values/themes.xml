@@ -9,6 +9,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:statusBarColor">@color/light_grey</item>
         <item name="fontFamily">@font/nt_somic</item>
+        <item name="buttonStyle">@style/Widget.Notes.Button.Custom</item>
         <item name="textAppearanceCaption">@style/TextAppearance.Notes.Caption</item>
         <item name="textInputStyle">@style/Widget.Notes.TextInputLayout.Custom</item>
         <item name="toolbarStyle">@style/Widget.Notes.Toolbar.Custom</item>
@@ -19,7 +20,7 @@
     <style name="Theme.Notes" parent="Base.Theme.Notes" />
 
     <!--    Button-->
-    <style name="Widget.Notes.Button.Custom" parent="Widget.MaterialComponents.Button">
+    <style name="Widget.Notes.Button.Custom" parent="Widget.MaterialComponents.Button.UnelevatedButton">
         <item name="backgroundTint">@color/black</item>
         <item name="shapeAppearance">@style/buttonShape</item>
     </style>

@@ -24,20 +24,20 @@ class NoteDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         showNoteDetails()
-        cancel()
+        goBack()
     }
 
     private fun showNoteDetails() {
         arguments?.getSerializable("note", Note::class.java)?.let { note ->
             views {
-                noteDate.text = note.caption
+                noteDate.text = note.date
                 noteText.text = note.text
             }
         }
     }
 
-    private fun cancel() = views {
-        cancelButton.setOnClickListener {
+    private fun goBack() = views {
+        backButton.setOnClickListener {
             findNavController().navigate(R.id.action_noteDetailsFragment_to_mainFragment)
         }
     }
