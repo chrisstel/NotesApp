@@ -1,10 +1,8 @@
 package com.example.notes.ui.main
 
 import android.os.Bundle
-import android.view.View
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -14,7 +12,6 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notes.R
 import com.example.notes.databinding.FragmentMainBinding
 import com.example.notes.domain.data.Note
-import com.example.notes.ui.AddNoteDialogFragment
 import com.example.notes.ui.main.recyclerview.NoteAdapter
 import com.example.notes.ui.main.recyclerview.SwipeHelper
 import com.example.notes.ui.main.viewmodel.MainViewModel
@@ -36,7 +33,6 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
         setupRecyclerView()
 
         views {
@@ -57,9 +53,20 @@ class MainFragment : Fragment() {
     }
 
     private fun setupRecyclerView() = views {
-        recyclerViewNotes.layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
-        recyclerViewNotes.adapter = NoteAdapter()
-        SwipeHelper(viewModel::deleteNote).attachToRecyclerView(recyclerViewNotes)
+        recyclerViewNotes.apply {
+            layoutManager = StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL)
+            adapter = NoteAdapter()
+            SwipeHelper(viewModel::deleteNote).attachToRecyclerView(this)
+        }
+
+        adapter?.setOnClickListener { note ->
+            val bundle = Bundle().apply {
+                putSerializable("note", note)
+            }
+
+            findNavController().navigate(R.id.action_mainFragment_to_noteDetailsFragment, bundle)
+
+        }
     }
 
     private fun renderNotes(notes: List<Note>) { adapter?.submitList(notes) }

@@ -9,11 +9,14 @@
         android:id="@+id/mainFragment"
         android:name="com.example.notes.ui.main.MainFragment"
         android:label="MainFragment"
-        tools:layout="@layout/fragment_main" >
+        tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_addNoteFragment"
             app:destination="@id/addNoteFragment"
             app:enterAnim="@anim/from_down" />
+        <action
+            android:id="@+id/action_mainFragment_to_noteDetailsFragment"
+            app:destination="@id/noteDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/getStartedFragment"
@@ -55,7 +58,7 @@
         android:id="@+id/createAccountFragment"
         android:name="com.example.notes.ui.create_account.CreateAccountFragment"
         android:label="CreateAccountFragment"
-        tools:layout="@layout/fragment_create_account" >
+        tools:layout="@layout/fragment_create_account">
         <action
             android:id="@+id/action_createAccountFragment_to_mainFragment"
             app:destination="@id/mainFragment"
@@ -66,7 +69,7 @@
         android:id="@+id/addNoteFragment"
         android:name="com.example.notes.ui.note.AddNoteFragment"
         android:label="AddNoteFragment"
-        tools:layout="@layout/fragment_add_note" >
+        tools:layout="@layout/fragment_add_note">
         <action
             android:id="@+id/action_addNoteFragment_to_mainFragment"
             app:destination="@id/mainFragment"
@@ -74,6 +77,18 @@
             app:exitAnim="@anim/to_down"
             app:popEnterAnim="@anim/from_down"
             app:popExitAnim="@anim/to_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteDetailsFragment"
+        android:name="com.example.notes.ui.main.NoteDetailsFragment"
+        android:label="NoteDetailsFragment"
+        tools:layout="@layout/fragment_note_details" >
+        <action
+            android:id="@+id/action_noteDetailsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="note"
+            app:argType="com.example.notes.domain.data.Note" />
     </fragment>
 
 </navigation>

@@ -11,6 +11,7 @@ class NoteViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHo
         private set
 
     companion object {
+        var onClick: ((Note) -> Unit)? = null
 
         fun create(parent: ViewGroup) = NoteItemBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -25,6 +26,7 @@ class NoteViewHolder(private val binding: NoteItemBinding) : RecyclerView.ViewHo
         views {
             TVCaption.text = note.caption
             TVText.text = note.text
+            root.setOnClickListener { onClick?.invoke(note) }
         }
     }
 

@@ -7,8 +7,11 @@ import com.example.notes.domain.data.Note
 class NoteAdapter : ListAdapter<Note, NoteViewHolder>(
     NoteDiffCallback()
 ) {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder = NoteViewHolder.create(parent)
 
     override fun onBindViewHolder(holder: NoteViewHolder, position: Int) = holder.bind(getItem(position))
+
+    fun setOnClickListener(listener: (Note) -> Unit) {
+        NoteViewHolder.onClick = listener
+    }
 }
