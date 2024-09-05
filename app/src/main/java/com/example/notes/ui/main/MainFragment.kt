@@ -36,14 +36,6 @@ class MainFragment : Fragment() {
         setupRecyclerView()
 
         views {
-//            imageViewAddNote.setOnClickListener {
-//                saveNote()
-//            }
-
-//            floatingButton.setOnClickListener {
-//                AddNoteDialogFragment().show(parentFragmentManager, "ADD_NOTE_FRAGMENT")
-//            }
-
             floatingButton.setOnClickListener {
                 findNavController().navigate(R.id.action_mainFragment_to_addNoteFragment)
             }
@@ -65,20 +57,10 @@ class MainFragment : Fragment() {
             }
 
             findNavController().navigate(R.id.action_mainFragment_to_noteDetailsFragment, bundle)
-
         }
     }
 
     private fun renderNotes(notes: List<Note>) { adapter?.submitList(notes) }
-
-//    private fun saveNote() {
-//        views {
-//            val text = editTextAddNote.text.toString().takeIf { it.isNotBlank() } ?: return@views
-//
-//            viewModel.saveNote(text = text)
-//            editTextAddNote.text.clear()
-//        }
-//    }
 
     private fun <T> views(block: FragmentMainBinding.() -> T): T? = binding?.block()
 }

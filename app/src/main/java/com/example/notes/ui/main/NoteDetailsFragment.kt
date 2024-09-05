@@ -3,6 +3,8 @@ package com.example.notes.ui.main
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -25,9 +27,23 @@ class NoteDetailsFragment : Fragment() {
 
         showNoteDetails()
         goBack()
+
+        views {
+            editNote.setOnClickListener {
+                it.visibility = INVISIBLE
+                _binding.saveNoteButton.visibility = VISIBLE
+            }
+
+            saveNoteButton.setOnClickListener {
+                it.visibility = INVISIBLE
+                _binding.editNote.visibility = VISIBLE
+            }
+        }
     }
 
     private fun showNoteDetails() {
+
+        //TODO
         arguments?.getSerializable("note", Note::class.java)?.let { note ->
             views {
                 noteDate.text = note.date

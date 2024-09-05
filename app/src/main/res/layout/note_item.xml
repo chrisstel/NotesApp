@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/content_margin"
-    app:cardBackgroundColor="#F8F8F8"
-    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
     app:cardElevation="0dp">
+
+    <!--    app:cardBackgroundColor="#F8F8F8"-->
 
     <LinearLayout
         android:layout_width="match_parent"

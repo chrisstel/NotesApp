@@ -27,4 +27,6 @@
     <string name="cancel_button_description">Cancel</string>
     <string name="save_note_button_description">Save note</string>
     <string name="new_note_title">New note</string>
+    <string name="edit_note_description">Edit note</string>
+    <string name="lorem_ipsum">Discover a treasure trove of wisdom within this insightful piece, highly respected in the nurturing DEV Community environment. Developers, whether novice or expert, are encouraged to participate and add to our shared knowledge basin. A simple thank you can illuminate someone\'s day. Express your appreciation in the comments section! On DEV, sharing ideas smoothens our journey and strengthens our community ties. Learn something useful? Offering a quick thanks to the author is deeply appreciated.</string>
 </resources>

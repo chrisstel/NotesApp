@@ -12,8 +12,7 @@
         tools:layout="@layout/fragment_main">
         <action
             android:id="@+id/action_mainFragment_to_addNoteFragment"
-            app:destination="@id/addNoteFragment"
-            app:enterAnim="@anim/from_down" />
+            app:destination="@id/addNoteFragment" />
         <action
             android:id="@+id/action_mainFragment_to_noteDetailsFragment"
             app:destination="@id/noteDetailsFragment" />
@@ -72,11 +71,7 @@
         tools:layout="@layout/fragment_add_note">
         <action
             android:id="@+id/action_addNoteFragment_to_mainFragment"
-            app:destination="@id/mainFragment"
-            app:enterAnim="@anim/from_up"
-            app:exitAnim="@anim/to_down"
-            app:popEnterAnim="@anim/from_down"
-            app:popExitAnim="@anim/to_up" />
+            app:destination="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/noteDetailsFragment"

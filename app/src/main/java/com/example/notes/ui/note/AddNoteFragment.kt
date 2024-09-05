@@ -25,12 +25,12 @@ class AddNoteFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         views {
-            cancelButton.setOnClickListener { cancel() }
+            backButton.setOnClickListener { goBack() }
             saveNoteButton.setOnClickListener { saveNote() }
         }
     }
 
-    private fun cancel() = views {
+    private fun goBack() = views {
         findNavController().navigate(R.id.action_addNoteFragment_to_mainFragment)
     }
 

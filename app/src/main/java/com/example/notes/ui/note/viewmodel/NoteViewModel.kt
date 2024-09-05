@@ -17,5 +17,5 @@ class NoteViewModel(
         date = createCaption(),
         text = text
     )
-    private fun createCaption(): String = DateFormat.format("hh:mm, MM.dd.yyyy", Date()).toString()
+    private fun createCaption(): String = DateFormat.format("HH:mm, dd.MM.yyyy", Date()).toString()
 }
